@@ -1,9 +1,9 @@
 pipeline {
-    agent any
+    agent { docker 'ruby'}
     stages {
         stage('build') {
             steps {
-                ruby -v
+                sh 'ruby -v'
             }
         }
     }
